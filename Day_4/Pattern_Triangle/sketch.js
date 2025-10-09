@@ -1,4 +1,4 @@
-let triSize = 100;
+let triSize = 50;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(5);
@@ -21,7 +21,7 @@ function draw() {
 
 
 function mouseClicked(){
-   background("black");
+   background(220);
 fill(random(0,255),random(0,255),random(0,255));
   for (let i = 0; i < width; i = i + triSize) {
     for (let j = 0; j < height; j = j + triSize) {
