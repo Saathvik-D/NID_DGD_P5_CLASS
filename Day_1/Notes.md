@@ -41,7 +41,4 @@
 
 ---
 
-### **Summary**
-Today I learned the **foundations of p5.js** and created my first animated sketch.  
-I explored how **shapes, colors, and randomness** can generate creative visuals.  
-In the next session, I plan to explore **interactivity** and **loops** to make my sketches more complex and engaging.
+
