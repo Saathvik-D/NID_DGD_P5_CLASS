@@ -39,6 +39,5 @@
 - Drawing and layering shapes on the canvas.
 - Real-time updates through the `draw()` loop.
 
----
 
 
