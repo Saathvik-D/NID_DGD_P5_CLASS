@@ -1,6 +1,6 @@
 let x = 0;
 let y = 0;
-let easing = 0.08; 
+let slowDown = 0.08; 
 function setup() {
   createCanvas(600, 400, WEBGL); 
   
@@ -13,8 +13,8 @@ function draw() {
   let targetX = mouseX - width / 2; 
   let targetY = mouseY - height / 2;
 
-  x += (targetX - x) * easing;
-  y += (targetY - y) * easing;
+  x += (targetX - x) * slowDown;
+  y += (targetY - y) * slowDown;
 
  
   ambientLight(100);
