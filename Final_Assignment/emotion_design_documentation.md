@@ -24,7 +24,7 @@ The feedback also made me realize that even though the idea feels very personal,
 
 
 ---
-![Pattern Output](Screenshot 2025-10-17 095221.png)
+![Pattern Output]("Screenshot 2025-10-17 095221.png")
 
 
 ## My Second Idea
