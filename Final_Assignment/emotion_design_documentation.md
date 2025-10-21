@@ -95,7 +95,8 @@ I was also told to focus on user experience — how users will input their emoti
 
 ---
 
-## Overall Reflection
-This exercise helped me connect **programming logic with expressive design.**  
-By assigning motion characteristics (easing) to emotions, I learned how code can represent **abstract feelings** through interaction and movement.  
-It was a fun and challenging way to explore **creative coding and user interactivity** in p5.js.
+
+![Pattern Output](5.png)
+
+
+
