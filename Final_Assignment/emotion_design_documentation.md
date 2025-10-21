@@ -22,7 +22,7 @@ It was also suggested that I maintain a visual balance so that one doesn’t ove
 The feedback also made me realize that even though the idea feels very personal, that’s actually a strength — it shows authenticity. I should reflect on how these meanings change for different people and create a smooth emotional transition between them to give the design more flow and depth.
 
 
-![image](img\Screenshot 2025-10-17 095221.png)
+![image]("Screenshot 2025-10-17 095221.png")
 
 ---
 
