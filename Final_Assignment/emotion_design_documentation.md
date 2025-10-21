@@ -36,7 +36,7 @@ However, I was also advised to think about how each emotion connects musically â
 I was also told to focus on user experience â€” how users will input their emotions, how the system interprets them, and how the final music piece reflects their emotional state. The overall feedback helped me see that the idea has strong potential if I can balance the technical and emotional sides carefully.
 
 
-# ## My 3rd Idea
+## My 3rd Idea
 
 ## What I Did
 - Created an **interactive animation** where a circle moves smoothly following the mouse cursor.  
