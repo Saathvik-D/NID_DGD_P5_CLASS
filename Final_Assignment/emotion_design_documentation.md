@@ -22,9 +22,10 @@ It was also suggested that I maintain a visual balance so that one doesn’t ove
 The feedback also made me realize that even though the idea feels very personal, that’s actually a strength — it shows authenticity. I should reflect on how these meanings change for different people and create a smooth emotional transition between them to give the design more flow and depth.
 
 
-![image]("Screenshot 2025-10-17 095221.png")
 
 ---
+![Pattern Output](Screenshot 2025-10-17 095221.png)
+
 
 ## My Second Idea
 After I got feedback for my previous ideation, I realized I needed to try something different. I thought about how we have six main emotions — **happiness, sadness, fear, anger, surprise,** and **disgust.** I wanted to play with them.
