@@ -24,7 +24,13 @@ The feedback also made me realize that even though the idea feels very personal,
 
 
 ---
-![Pattern Output]("1.png")
+![Pattern Output](1.png)
+
+![Pattern Output](2.png)
+
+![Pattern Output](3.png)
+
+![Pattern Output](4.png)
 
 
 ## My Second Idea
