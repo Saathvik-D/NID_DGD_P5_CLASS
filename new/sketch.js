@@ -1,65 +1,105 @@
-let x = 0;
-let y = 0;
+let paddleW = 30;
+let paddleH = 120;
+let paddleSpeed = 7;
+let borderThickness = paddleW;
 
+let playerPaddle, aiPaddle, ball;
+let leftScore = 0;
+let rightScore = 0;
 
-let emotions = ['Happy', 'Sad', 'Angry', 'Surprised', 'Calm', 'Excited'];
-
-
-let easings = [0.2, 0.05, 0.1, 0.15, 0.03, 0.25];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  textAlign(CENTER, CENTER);
-  textSize(24);
+  createCanvas(1080, 720);
+  rectMode(CENTER);
   noStroke();
+
+
+  // Left player paddle (player)
+  playerPaddle = new PaddlePlayer(paddleW + 10, height / 2, paddleW, paddleH, paddleSpeed);
+
+
+  // Right paddle (AI)
+  aiPaddle = new PaddleAi(width - paddleW - 10, height / 2, paddleW, paddleH, paddleSpeed);
+
+
+  // Ball in center
+  ball = new Ball(width / 2, height / 2, 15, 4, random(-2, 2));
 }
+
 
 function draw() {
-  background(220);
+  background(255);
 
 
-  emotionsBox();
+  // draw scores
+  fill(0, 0, 0, 20);
+  textSize(200);
+  textAlign(CENTER, CENTER); // center horizontally and vertically
+  text(leftScore, width * 0.25, height / 2);
+  text(rightScore, width * 0.75, height / 2);
 
 
-  let boxWidth = width / emotions.length;
-  let zone = floor(mouseX / boxWidth);
+  // top and bottom bars
+  fill(0);
+  rect(width / 2, borderThickness / 2, width, borderThickness);
+  rect(width / 2, height - borderThickness / 2, width, borderThickness);
 
 
-  zone = constrain(zone, 0, emotions.length - 1);
-
-
-  let easing = easings[zone];
-
-
-  let targetX = mouseX;
-  let targetY = mouseY;
-
-
-  x += (targetX - x) * easing;
-  y += (targetY - y) * easing;
-
-
-  fill(100, 200, 255);
-  ellipse(x, y, 50, 50);
-
-
-  fill(50);
-  textSize(32);
- // text(`Current Emotion: ${emotions[zone]}`, width / 2, height - 40);
-}
-
-
-function emotionsBox() {
-  let boxWidth = width / emotions.length;
-
-  for (let i = 0; i < emotions.length; i++) {
-
-    fill(255 - i * 30, 200 - i * 20, 150 + i * 15, 80);
-    rect(i * boxWidth, 0, boxWidth, height);
-
-
-    fill(0);
-    textSize(20);
-    text(emotions[i], i * boxWidth + boxWidth / 2, 30);
+  // center line (dashed)
+  stroke(0);
+  strokeWeight(2);
+  for (let y = borderThickness + 20; y < height - borderThickness - 20; y += 30) {
+    line(width / 2, y, width / 2, y + 12);
   }
+  noStroke();
+
+
+  // draw paddles
+  fill(0);
+  playerPaddle.show();
+  aiPaddle.show();
+
+
+
+  if (keyIsDown(UP_ARROW)) {
+    playerPaddle.moveUp();
+
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    playerPaddle.moveDown();
+
+  }
+
+
+  // AI automatic movement
+
+  aiPaddle.smoothFollowWithError(ball.y, 0.01, 30);
+
+
+
+  // ball
+  ball.show();
+  ball.update();
+
+
+  // collisions
+  ball.checkCollision(playerPaddle);
+  ball.checkCollision(aiPaddle);
+
+
+  // scoring: if ball goes out horizontally, award point and reset
+  if (ball.x - ball.r < 0) {
+    // right player scores
+    rightScore++;
+    ball.reset(+1); // serve to right
+  } else if (ball.x + ball.r > width) {
+    leftScore++;
+    ball.reset(-1); // serve to left
+  }
+
+
+
+
+
+
 }
